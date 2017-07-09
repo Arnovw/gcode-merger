@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f11bb372-b43c-4829-b00c-188149669e15" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1T-4t 3-alles F100.gcode" afterPath="$PROJECT_DIR$/workdirectory/1T-4t 3-alles F100.gcode" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/1T-4t 3-alles F20.gcode" afterPath="$PROJECT_DIR$/workdirectory/1T-4t 3-alles F20.gcode" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output.gcode" afterPath="$PROJECT_DIR$/workdirectory/output.gcode" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mix.py" afterPath="$PROJECT_DIR$/mix.py" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,11 +21,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="mix.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mix.py">
+      <file leaf-file-name="1T-4t 3-alles F100.gcode" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/workdirectory/1T-4t 3-alles F100.gcode">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="77" column="16" lean-forward="false" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
+            <state relative-caret-position="499">
+              <caret line="26262" column="25" lean-forward="false" selection-start-line="26262" selection-start-column="25" selection-end-line="26262" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -134,6 +136,34 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="workdirectory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value=".idea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -164,6 +194,9 @@
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="TEXT" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/workdirectory" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -809,16 +842,15 @@
       <option name="presentableId" value="Default" />
       <updated>1499189435902</updated>
       <workItem from="1499189437864" duration="1188000" />
-      <workItem from="1499601903532" duration="13630000" />
+      <workItem from="1499601903532" duration="13692000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14818000" />
+    <option name="totallyTimeSpent" value="14880000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -832,7 +864,7 @@
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17421874" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27578124" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -860,12 +892,36 @@
     </breakpoint-manager>
     <watches-manager />
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/mix.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1499624503000" expanded="true" signature="0:35" ph="..." />
+            <marker date="1499624503000" expanded="true" signature="53:253" ph="..." />
+            <marker date="1499624503000" expanded="true" signature="290:425" ph="..." />
+            <marker date="1499624503000" expanded="true" signature="461:668" ph="..." />
+            <marker date="1499624503000" expanded="true" signature="537:601" ph="..." />
+            <marker date="1499624503000" expanded="true" signature="697:783" ph="..." />
+            <marker date="1499624503000" expanded="true" signature="824:872" ph="..." />
+            <marker date="1499624503000" expanded="true" signature="930:1265" ph="..." />
+            <marker date="1499624503000" expanded="true" signature="1075:1162" ph="..." />
+            <marker date="1499624503000" expanded="true" signature="1304:1537" ph="..." />
+            <marker date="1499624503000" expanded="true" signature="1372:1459" ph="..." />
+            <marker date="1499624503000" expanded="true" signature="1588:1678" ph="..." />
+            <marker date="1499624503000" expanded="true" signature="1771:2726" ph="..." />
+            <marker date="1499624503000" expanded="true" signature="2091:2190" ph="..." />
+            <marker date="1499624503000" expanded="true" signature="2232:2702" ph="..." />
+            <marker date="1499624503000" expanded="true" signature="2287:2702" ph="..." />
+            <marker date="1499624503000" expanded="true" signature="2408:2665" ph="..." />
+            <marker date="1499624503000" expanded="true" signature="2867:3602" ph="..." />
+            <marker date="1499624503000" expanded="true" signature="2946:3342" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -897,14 +953,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1T-4t 3-alles F100.gcode">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="26262" column="25" lean-forward="false" selection-start-line="26262" selection-start-column="25" selection-end-line="26262" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -2029,15 +2077,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/1T-4t 3-alles F20.gcode">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="13178" column="30" lean-forward="true" selection-start-line="13178" selection-start-column="30" selection-end-line="13178" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output.gcode">
+    <entry file="file://$PROJECT_DIR$/workdirectory/output.gcode">
       <provider editor-type-id="LargeFileEditor">
         <state relative-caret-position="688">
           <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="6" />
@@ -2070,6 +2110,42 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="77" column="16" lean-forward="false" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
+          <folding>
+            <marker date="1499624503000" expanded="true" signature="0:35" ph="..." />
+            <marker date="1499624503000" expanded="true" signature="53:253" ph="..." />
+            <marker date="1499624503000" expanded="true" signature="290:425" ph="..." />
+            <marker date="1499624503000" expanded="true" signature="461:668" ph="..." />
+            <marker date="1499624503000" expanded="true" signature="537:601" ph="..." />
+            <marker date="1499624503000" expanded="true" signature="697:783" ph="..." />
+            <marker date="1499624503000" expanded="true" signature="824:872" ph="..." />
+            <marker date="1499624503000" expanded="true" signature="930:1265" ph="..." />
+            <marker date="1499624503000" expanded="true" signature="1075:1162" ph="..." />
+            <marker date="1499624503000" expanded="true" signature="1304:1537" ph="..." />
+            <marker date="1499624503000" expanded="true" signature="1372:1459" ph="..." />
+            <marker date="1499624503000" expanded="true" signature="1588:1678" ph="..." />
+            <marker date="1499624503000" expanded="true" signature="1771:2726" ph="..." />
+            <marker date="1499624503000" expanded="true" signature="2091:2190" ph="..." />
+            <marker date="1499624503000" expanded="true" signature="2232:2702" ph="..." />
+            <marker date="1499624503000" expanded="true" signature="2287:2702" ph="..." />
+            <marker date="1499624503000" expanded="true" signature="2408:2665" ph="..." />
+            <marker date="1499624503000" expanded="true" signature="2867:3602" ph="..." />
+            <marker date="1499624503000" expanded="true" signature="2946:3342" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workdirectory/1T-4t 3-alles F20.gcode">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="13178" column="30" lean-forward="true" selection-start-line="13178" selection-start-column="30" selection-end-line="13178" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workdirectory/1T-4t 3-alles F100.gcode">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="26262" column="25" lean-forward="false" selection-start-line="26262" selection-start-column="25" selection-end-line="26262" selection-end-column="25" />
           <folding />
         </state>
       </provider>
