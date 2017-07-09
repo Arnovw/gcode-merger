@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f11bb372-b43c-4829-b00c-188149669e15" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gcode.iml" afterPath="" />
       <change type="MOVED" beforePath="$PROJECT_DIR$/1T-4t 3-alles F100.gcode" afterPath="$PROJECT_DIR$/workdirectory/1T-4t 3-alles F100.gcode" />
       <change type="MOVED" beforePath="$PROJECT_DIR$/1T-4t 3-alles F20.gcode" afterPath="$PROJECT_DIR$/workdirectory/1T-4t 3-alles F20.gcode" />
       <change type="MOVED" beforePath="$PROJECT_DIR$/output.gcode" afterPath="$PROJECT_DIR$/workdirectory/output.gcode" />
@@ -842,12 +843,12 @@
       <option name="presentableId" value="Default" />
       <updated>1499189435902</updated>
       <workItem from="1499189437864" duration="1188000" />
-      <workItem from="1499601903532" duration="13692000" />
+      <workItem from="1499601903532" duration="13700000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14880000" />
+    <option name="totallyTimeSpent" value="14888000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
