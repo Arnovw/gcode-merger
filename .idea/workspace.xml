@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f11bb372-b43c-4829-b00c-188149669e15" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/1T-4t 3-alles F100.gcode" afterPath="$PROJECT_DIR$/1T-4t 3-alles F100.gcode" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/1T-4t 3-alles F20.gcode" afterPath="$PROJECT_DIR$/1T-4t 3-alles F20.gcode" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gcode.iml" afterPath="$PROJECT_DIR$/gcode.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mix.py" afterPath="$PROJECT_DIR$/mix.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output.gcode" afterPath="$PROJECT_DIR$/output.gcode" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,8 +22,8 @@
       <file leaf-file-name="mix.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mix.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="97" column="6" lean-forward="true" selection-start-line="97" selection-start-column="6" selection-end-line="97" selection-end-column="6" />
+            <state relative-caret-position="255">
+              <caret line="77" column="16" lean-forward="false" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -69,6 +63,9 @@
       <find>692.73009</find>
       <find>write</find>
       <find>693.57789</find>
+      <find>start_line_index</find>
+      <find>60</find>
+      <find>LAYER:60</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -812,12 +809,12 @@
       <option name="presentableId" value="Default" />
       <updated>1499189435902</updated>
       <workItem from="1499189437864" duration="1188000" />
-      <workItem from="1499601903532" duration="13347000" />
+      <workItem from="1499601903532" duration="13630000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14535000" />
+    <option name="totallyTimeSpent" value="14818000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
@@ -900,14 +897,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1T-4t 3-alles F20.gcode">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="25722" column="10" lean-forward="true" selection-start-line="25722" selection-start-column="10" selection-end-line="25722" selection-end-column="10" />
           <folding />
         </state>
       </provider>
@@ -2040,6 +2029,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/1T-4t 3-alles F20.gcode">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="13178" column="30" lean-forward="true" selection-start-line="13178" selection-start-column="30" selection-end-line="13178" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/output.gcode">
       <provider editor-type-id="LargeFileEditor">
         <state relative-caret-position="688">
@@ -2063,16 +2060,16 @@
         </state>
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="13346" column="30" lean-forward="false" selection-start-line="13346" selection-start-column="30" selection-end-line="13346" selection-end-column="30" />
+        <state relative-caret-position="121">
+          <caret line="13346" column="0" lean-forward="false" selection-start-line="13346" selection-start-column="0" selection-end-line="13346" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mix.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="97" column="6" lean-forward="true" selection-start-line="97" selection-start-column="6" selection-end-line="97" selection-end-column="6" />
+        <state relative-caret-position="255">
+          <caret line="77" column="16" lean-forward="false" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
           <folding />
         </state>
       </provider>

@@ -66,23 +66,17 @@ def append_to_file(output_file_name, config_item, previous_extrusion, baseline_e
     else:
         end_line_index = find_layer_line(config_item['path'], config_item['stop'])
 
-    print "start_line_index: " + `start_line_index`
-    print "end_line_index: " + `end_line_index`
-    print ""
+    # print "start_line_index: " + `start_line_index`
+    # print "end_line_index: " + `end_line_index`
 
     for index, line in enumerate(lines):
         if start_line_index <= index < end_line_index:
 
             if previous_extrusion is not None and baseline_extrusion is not None and does_line_contain_extrusion(line):
                 current_extrusion = parse_extrusion(line)
-
-                diff = current_extrusion - previous_extrusion
-                new_extrusion = baseline_extrusion + diff
-
+                difference = current_extrusion - previous_extrusion
+                new_extrusion = baseline_extrusion + difference
                 line = get_line_for_extrusion(new_extrusion, line)
-
-                # previous_extrusion = current_extrusion
-                # baseline_extrusion = new_extrusion
 
             output_file.write(line)
     output_file.close()
@@ -107,6 +101,7 @@ for index, config_item in enumerate(config_list):
     print "File: " + `config_item['path']`
     print "baseline_extrusion: " + `baseline_extrusion`
     print "previous_extrusion: " + `previous_extrusion`
+    print ""
 
     append_to_file(output_file_name, config_item, previous_extrusion, baseline_extrusion)
 
