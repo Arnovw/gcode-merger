@@ -3,9 +3,9 @@
 
 
 config_list = [
-    {'path': "1T-4t 3-alles F20.gcode", 'start': 0, 'stop': 30},
-    {'path': "1T-4t 3-alles F100.gcode", 'start': 30, 'stop': 60},
-    {'path': "1T-4t 3-alles F20.gcode", 'start': 60, 'stop': None}
+    {'path': "work/1T-4t 3-alles F20.gcode", 'start': 0, 'stop': 30},
+    {'path': "work/1T-4t 3-alles F100.gcode", 'start': 30, 'stop': 60},
+    {'path': "work/1T-4t 3-alles F20.gcode", 'start': 60, 'stop': None}
 ]
 
 
@@ -82,7 +82,7 @@ def append_to_file(output_file_name, config_item, previous_extrusion, baseline_e
     output_file.close()
 
 
-output_file_name = "output.gcode"
+output_file_name = "work/output.gcode"
 open(output_file_name, "w").close()  # empty out file
 
 for index, config_item in enumerate(config_list):
