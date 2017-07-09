@@ -2,20 +2,21 @@
 # encoding: utf-8
 
 
-config = [
-    {'path': "1T-4t 3-alles F20.gcode", 'start': 0, 'stop': 840},
-    {'path': "1T-4t 3-alles F100.gcode", 'start': 840, 'stop': None}
+config_list = [
+    {'path': "1T-4t 3-alles F20.gcode", 'start': 0, 'stop': 30},
+    {'path': "1T-4t 3-alles F100.gcode", 'start': 30, 'stop': 60},
+    {'path': "1T-4t 3-alles F20.gcode", 'start': 60, 'stop': None}
 ]
 
 
-def findStartLine(fileConfig):
-    if fileConfig['start'] == 0:
+def find_start_line(config_item):
+    if config_item['start'] == 0:
         return 0
     else:
-        return findLayerLine(fileConfig['path'], fileConfig['start'])
+        return find_layer_line(config_item['path'], config_item['start'])
 
 
-def findLayerLine(path, layer):
+def find_layer_line(path, layer):
     lines = open(path).readlines()
     for index, line in enumerate(lines):
         if "LAYER:" + `layer` in line:
@@ -24,69 +25,89 @@ def findLayerLine(path, layer):
     raise ValueError('Following layer could not be found', layer)
 
 
-def parseExtrusion(line):
+def parse_extrusion(line):
     extrusion = line.split(" ")[-1]
     value = float(extrusion[1:])
     return value
 
 
-def doesLineContainExtrusion(line):
+def does_line_contain_extrusion(line):
     return line.startswith("G") and "E" in line
 
 
-def findLastExtrusionBeforeLayer(path, lastLayer):
-    lastLayerIndex = findLayerLine(path, lastLayer)
+def find_last_extrusion_before_layer(path, last_layer):
+    last_layer_index = find_layer_line(path, last_layer)
     lines = open(path).readlines()
-    for line in reversed(lines[0:lastLayerIndex]):
-        if doesLineContainExtrusion(line):
-            return parseExtrusion(line)
-    raise ValueError('No last extrusion value could be found for file before layer', path, lastLayer)
+    for line in reversed(lines[0:last_layer_index]):
+        if does_line_contain_extrusion(line):
+            return parse_extrusion(line)
+    raise ValueError('No last extrusion value could be found for file before layer', path, last_layer)
 
 
-def replaceExtrusion(line, currentFileLastExtrusion, previousFileLastExtrusion):
-    diff = currentFileLastExtrusion - parseExtrusion(line)
-    newExtrusion = previousFileLastExtrusion - diff
-    return " ".join(line.split(" ")[:-1]) + " E" + '{0:.5f}'.format(newExtrusion) + "\n"
+def find_last_extrusion_value(path):
+    lines = open(path).readlines()
+    for line in reversed(lines):
+        if does_line_contain_extrusion(line):
+            return parse_extrusion(line)
+    raise ValueError('No last extrusion value could be found for file', path)
 
 
-def appendToFile(outputFile, fileConfig, currentFileLastExtrusion, previousFileLastExtrusion):
-    lines = open(fileConfig['path']).readlines()
-    startLineIndex = findStartLine(fileConfig)
+def get_line_for_extrusion(new_extrusion, line):
+    return " ".join(line.split(" ")[:-1]) + " E" + '{0:.5f}'.format(new_extrusion) + "\n"
 
-    if fileConfig['stop'] == None:
-        endLineIndex = len(lines)
+
+def append_to_file(output_file_name, config_item, previous_extrusion, baseline_extrusion):
+    output_file = open(output_file_name, "a")
+    lines = open(config_item['path']).readlines()
+    start_line_index = find_start_line(config_item)
+
+    if config_item['stop'] is None:
+        end_line_index = len(lines)
     else:
-        endLineIndex = findLayerLine(fileConfig['path'], fileConfig['stop'])
+        end_line_index = find_layer_line(config_item['path'], config_item['stop'])
 
-    print "startLineIndex: " + `startLineIndex`
-    print "endLineIndex: " + `endLineIndex`
+    print "start_line_index: " + `start_line_index`
+    print "end_line_index: " + `end_line_index`
     print ""
 
     for index, line in enumerate(lines):
-        if startLineIndex <= index < endLineIndex:
-            # print "writing line " + `index`
-            if currentFileLastExtrusion != None and previousFileLastExtrusion != None and doesLineContainExtrusion(line):
-                line = replaceExtrusion(line, currentFileLastExtrusion, previousFileLastExtrusion)
+        if start_line_index <= index < end_line_index:
 
-            outputFile.write(line)
+            if previous_extrusion is not None and baseline_extrusion is not None and does_line_contain_extrusion(line):
+                current_extrusion = parse_extrusion(line)
+
+                diff = current_extrusion - previous_extrusion
+                new_extrusion = baseline_extrusion + diff
+
+                line = get_line_for_extrusion(new_extrusion, line)
+
+                # previous_extrusion = current_extrusion
+                # baseline_extrusion = new_extrusion
+
+            output_file.write(line)
+    output_file.close()
 
 
-outputFile = open("output.gcode", "w")
+output_file_name = "output.gcode"
+open(output_file_name, "w").close()  # empty out file
 
-for index, fileConfig in enumerate(config):
-    previousFileLastExtrusion = None;
-    currentFileLastExtrusion = None;
+for index, config_item in enumerate(config_list):
+    baseline_extrusion = None
+    previous_extrusion = None
 
     if index > 0:
-        previousConfig = config[index - 1]
-        previousFileLastExtrusion = findLastExtrusionBeforeLayer(previousConfig['path'], previousConfig['stop'])
-        currentFileLastExtrusion = findLastExtrusionBeforeLayer(fileConfig['path'], fileConfig['start'])
+        previous_extrusion = find_last_extrusion_before_layer(config_item['path'], config_item['start'])
+        previous_config = config_list[index - 1]
 
-    print "File: " + `fileConfig['path']`
-    print "previousFileLastExtrusion: " + `previousFileLastExtrusion`
-    print "currentFileLastExtrusion: " + `currentFileLastExtrusion`
+        if index == 1:
+            baseline_extrusion = find_last_extrusion_before_layer(previous_config['path'], previous_config['stop'])
+        elif index >= 1:
+            baseline_extrusion = find_last_extrusion_value(output_file_name)
 
-    appendToFile(outputFile, fileConfig, currentFileLastExtrusion, previousFileLastExtrusion)
+    print "File: " + `config_item['path']`
+    print "baseline_extrusion: " + `baseline_extrusion`
+    print "previous_extrusion: " + `previous_extrusion`
+
+    append_to_file(output_file_name, config_item, previous_extrusion, baseline_extrusion)
 
 print "DONE"
-outputFile.close()
